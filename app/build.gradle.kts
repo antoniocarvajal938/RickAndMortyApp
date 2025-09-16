@@ -63,5 +63,6 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.androidx.glance.appwidget)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.navigation.compose)
 
 }

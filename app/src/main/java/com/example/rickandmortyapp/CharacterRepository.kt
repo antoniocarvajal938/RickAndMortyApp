@@ -15,3 +15,16 @@ class CharacterRepository {
         }
     }
 }
+
+class EpisodeRepository {
+    private val apiService = RetrofitInstance.apiService
+
+    suspend fun getEpisodes(): List<Episode> {
+        val response = apiService.getEpisodes()
+        return if (response.isSuccessful) {
+            response.body()?.results ?: emptyList()
+        } else {
+            emptyList()
+        }
+    }
+}
